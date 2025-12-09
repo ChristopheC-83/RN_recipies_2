@@ -1,4 +1,5 @@
 import { create } from "zustand";
+import { API_KEY } from "../keys";
 
 export const useRecipeDetailsStore = create((set, get) => ({
   details: {}, // cache: { [id]: recipeData }
@@ -15,9 +16,6 @@ export const useRecipeDetailsStore = create((set, get) => ({
 
     set({ loading: true, error: null });
 
-    // const API_KEY = "7c382b29b3b8403794083080e98a1f64"; //kiketDule
-    // const API_KEY = "82de028e24b646f1926f2a097df9f832"; //DuletKik
-    const API_KEY = "c32829f64eb947289d361b8ac7886ce1"; //chrisdev
     const url = `https://api.spoonacular.com/recipes/${recipeId}/information?apiKey=${API_KEY}`;
 
     try {

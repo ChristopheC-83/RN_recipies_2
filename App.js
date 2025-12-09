@@ -6,6 +6,7 @@ import HomeScreen from "./src/screens/Home/Home";
 import TestScreen from "./src/screens/Test/Test";
 import RecipiesList from "./src/screens/RecipiesList/RecipiesList";
 import RecipieDetails from "./src/screens/RecipeDetails/RecipeDetails";
+import TasksScreen from "./src/screens/TasksScreen/TasksScreen";
 
 const Stack = createNativeStackNavigator();
 
@@ -15,7 +16,7 @@ export default function App() {
     //   <SafeAreaView style={{ flex: 1, backgroundColor: "#ddd" }}>
     <NavigationContainer>
       <Stack.Navigator
-        initialRouteName="Recipes List"
+        initialRouteName="Tasks List"
         //  on centre le titre
         screenOptions={{
           headerTitleAlign: "center",
@@ -23,6 +24,7 @@ export default function App() {
       >
         {/* initialRouteName permet de choisir l'ecran d'accueil sinon 1er stack pack.screen par defaut */}
         <Stack.Screen name="Recipes List" component={RecipiesList} />
+        <Stack.Screen name="Tasks List" component={TasksScreen} />
         <Stack.Screen
           name="Recipes Details"
           component={RecipieDetails}

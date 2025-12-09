@@ -1,4 +1,12 @@
-import { View, Text, Pressable, ActivityIndicator, Image } from "react-native";
+import {
+  View,
+  Text,
+  Pressable,
+  ActivityIndicator,
+  Image,
+  FlatList,
+  ScrollView,
+} from "react-native";
 import { s } from "./RecipeDetails.style";
 import { useEffect, useState } from "react";
 import { useRecipeDetailsStore } from "../../store/recipiesDetailsStore";
@@ -30,29 +38,24 @@ export default function RecipeDetails({ navigation, route }) {
     return <Text style={s.info}>Aucune recette trouvée...</Text>;
 
   return (
-    <View style={s.container}>
+    <ScrollView style={s.container}>
       {/* retour en arriere ou une autre page au besoin */}
       {/* <Pressable onPress={() => navigation.goBack()}>
         <Text>Go Back</Text>
       </Pressable> */}
       <Image source={{ uri: currentRecipe.image }} style={s.image} />
       <Text style={s.title}>{currentRecipe.title}</Text>
-          <Text style={s.caption}> ⏱️Prêt en {currentRecipe.readyInMinutes} minutes.</Text>
-          <View>
-              
-              {/* {currentRecipe.extendedIngredients.map((ingredient) => (
-                <Text key={ingredient.id}>{ingredient.name}</Text>
-
-              ))
-              } */}
+      <Text style={s.caption}>
+        ⏱️Prêt en {currentRecipe.readyInMinutes} minutes.
+      </Text>
+      <View style={s.ingredientContainer}>
+        <Text style={s.title}>Ingrédients :</Text>
+        {currentRecipe.extendedIngredients.map((ingredient) => (
+          <Text key={ingredient.id} style={s.ingredient}>
+            {ingredient.name}
+          </Text>
+        ))}
       </View>
-      <View ></View>
-
-      {/* {localRecipe && (
-        <View>
-          <Text>{localRecipe.title}</Text>
-        </View>
-      )} */}
-    </View>
+    </ScrollView>
   );
 }

@@ -12,6 +12,24 @@ export const s = StyleSheet.create({
     textAlign: "center",
     marginVertical: 10,
   },
-  caption: { textAlign: "center" , },
+  caption: { textAlign: "center" },
+  ingredient: {
+    fontSize: 16,
+    marginVertical: 3,
+  },
+  ingredientContainer: {
+    margin: 10,
+    borderTopColor: "gray",
+    borderTopWidth: 1,
+    padding: 6,
+  },
+  title: {
+    fontSize: 18,
+    fontWeight: "bold",
+    textAlign: "center",
+    marginVertical: 10,
+    textDecorationLine : "underline",
+  },
+  _container: {},
   _container: {},
 });
