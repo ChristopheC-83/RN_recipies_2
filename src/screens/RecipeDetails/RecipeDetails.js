@@ -40,8 +40,13 @@ export default function RecipeDetails({ navigation, route }) {
           <Text style={s.caption}> ⏱️Prêt en {currentRecipe.readyInMinutes} minutes.</Text>
           <View>
               
-              {/* {currentRecipe.extendedIngredients.map()} */}
-          </View>
+              {/* {currentRecipe.extendedIngredients.map((ingredient) => (
+                <Text key={ingredient.id}>{ingredient.name}</Text>
+
+              ))
+              } */}
+      </View>
+      <View ></View>
 
       {/* {localRecipe && (
         <View>
