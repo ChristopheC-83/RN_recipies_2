@@ -2,9 +2,6 @@ import { View, Text, Image, Pressable } from "react-native";
 import { s } from "./RecipeTile.style";
 
 export default function RecipeTile({ item, navigation }) {
-
-
- 
   return (
     <Pressable
       style={s.container}

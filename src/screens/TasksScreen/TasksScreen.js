@@ -13,7 +13,7 @@ export default function TasksScreen() {
   const doneTasks = tasks.filter((t) => t.isCompleted);
 
   return (
-    <ScreenContainer>
+    <ScreenContainer >
       <ScrollView>
         <Text style={s.test}>Tasks</Text>
 

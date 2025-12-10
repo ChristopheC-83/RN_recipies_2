@@ -17,22 +17,20 @@ export default function RecipiesList({ navigation }) {
   if (error) return <Text>Error: {error.message}</Text>;
 
   return (
-    <ScreenContainer>
-      <View style={s}>
-        <FlatList
-          data={recipes}
-          keyExtractor={(item) => item.id.toString()}
-          // renderItem={({ item }) => <Text>{item.title}</Text> }
-          renderItem={({ item }) => (
-            <RecipeTile item={item} navigation={navigation} />
-          )}
-          onEndReached={() => fetchRecipes()}
-          onEndReachedThreshold={0.5}
-          ListFooterComponent={
-            loading ? <ActivityIndicator style={{ margin: 20 }} /> : null
-          }
-        />
-      </View>
+    <ScreenContainer skipTop>
+      <FlatList
+        data={recipes}
+        keyExtractor={(item) => item.id.toString()}
+        // renderItem={({ item }) => <Text>{item.title}</Text> }
+        renderItem={({ item }) => (
+          <RecipeTile item={item} navigation={navigation} />
+        )}
+        onEndReached={() => fetchRecipes()}
+        onEndReachedThreshold={0.5}
+        ListFooterComponent={
+          loading ? <ActivityIndicator style={{ margin: 20 }} /> : null
+        }
+      />
     </ScreenContainer>
   );
 }
