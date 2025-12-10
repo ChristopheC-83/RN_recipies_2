@@ -1,4 +1,3 @@
-
 import { NavigationContainer } from "@react-navigation/native";
 import TasksScreen from "../screens/TasksScreen/TasksScreen";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";

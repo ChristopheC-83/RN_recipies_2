@@ -1,4 +1,4 @@
-import { SafeAreaProvider, SafeAreaView } from "react-native-safe-area-context";
+import { SafeAreaProvider } from "react-native-safe-area-context";
 import AppNavigation from "./src/navigation";
 import GlobalToast from "./src/components/Toast/Toast";
 

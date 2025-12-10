@@ -30,7 +30,6 @@ export const useRecipesStore = create((set, get) => ({
     try {
       const res = await fetch(url);
       const data = await res.json();
-      // set({ recipes: data.results || [] });
       set({
         recipes: [...recipes, ...(data.results || [])],
         offset: offset + MAX_PER_PAGE,
@@ -47,5 +46,3 @@ export const useRecipesStore = create((set, get) => ({
   resetRecipes: () => set({ recipes: [], offset: 0, hasMore: true }),
 }));
 
-//  dans un composant
-// const { recipes, loading, error, fetchRecipes } = useRecipesStore();

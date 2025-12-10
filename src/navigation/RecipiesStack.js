@@ -2,9 +2,6 @@ import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import RecipiesList from "../screens/RecipiesList/RecipiesList";
 import RecipeDetails from "../screens/RecipeDetails/RecipeDetails";
 
-import { Pressable } from "react-native";
-// import testPage from "../screens/testPage/testPage";
-
 const Stack = createNativeStackNavigator();
 
 export default function RecipiesStask() {

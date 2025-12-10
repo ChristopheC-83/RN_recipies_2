@@ -27,41 +27,6 @@ export default function Profile({navigation}) {
         <Text style={s.textProfile}>Profile</Text>
         <Text style={s.textProfile}>Profile</Text>
         <Text style={s.textProfile}>Profile</Text>
-        <Text style={s.textProfile}>Profile</Text>
-        <Text style={s.textProfile}>Profile</Text>
-        <Text style={s.textProfile}>Profile</Text>
-        <Text style={s.textProfile}>Profile</Text>
-        <Text style={s.textProfile}>Profile</Text>
-        <Text style={s.textProfile}>Profile</Text>
-        <Text style={s.textProfile}>Profile</Text>
-        <Text style={s.textProfile}>Profile</Text>
-        <Text style={s.textProfile}>Profile</Text>
-        <Text style={s.textProfile}>Profile</Text>
-        <Text style={s.textProfile}>Profile</Text>
-        <Text style={s.textProfile}>Profile</Text>
-        <Text style={s.textProfile}>Profile</Text>
-        <Text style={s.textProfile}>Profile</Text>
-        <Text style={s.textProfile}>Profile</Text>
-        <Text style={s.textProfile}>Profile</Text>
-        <Text style={s.textProfile}>Profile</Text>
-        <Text style={s.textProfile}>Profile</Text>
-        <Text style={s.textProfile}>Profile</Text>
-        <Text style={s.textProfile}>Profile</Text>
-        <Text style={s.textProfile}>Profile</Text>
-        <Text style={s.textProfile}>Profile</Text>
-        <Text style={s.textProfile}>Profile</Text>
-        <Text style={s.textProfile}>Profile</Text>
-        <Text style={s.textProfile}>Profile</Text>
-        <Text style={s.textProfile}>Profile</Text>
-        <Text style={s.textProfile}>Profile</Text>
-        <Text style={s.textProfile}>Profile</Text>
-        <Text style={s.textProfile}>Profile</Text>
-        <Text style={s.textProfile}>Profile</Text>
-        <Text style={s.textProfile}>Profile</Text>
-        <Text style={s.textProfile}>Profile</Text>
-        <Text style={s.textProfile}>Profile</Text>
-        <Text style={s.textProfile}>Profile</Text>
-        <Text style={s.textProfile}>Profile</Text>
       </ScrollView>
     </ScreenContainer>
   );

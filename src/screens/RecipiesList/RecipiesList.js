@@ -1,6 +1,5 @@
-import { s } from "./RecipiesList.style";
 import { useEffect } from "react";
-import { FlatList, Text, ActivityIndicator, View } from "react-native";
+import { FlatList, Text, ActivityIndicator } from "react-native";
 import { useRecipesStore } from "../../store/recipiesStore";
 import RecipeTile from "../../components/RecipeTile/RecipeTile";
 import ScreenContainer from "../ScreenContainer/ScreenContainer";
@@ -11,7 +10,6 @@ export default function RecipiesList({ navigation }) {
 
   useEffect(() => {
     fetchRecipes();
-    // console.log(recipes);
   }, []);
 
   if (error) return <Text>Error: {error.message}</Text>;

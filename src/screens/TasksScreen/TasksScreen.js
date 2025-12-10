@@ -1,4 +1,4 @@
-import { View, Text, FlatList, ScrollView } from "react-native";
+import { Text, FlatList, ScrollView } from "react-native";
 import { s } from "./TasksScreen.style";
 import Header from "../../components/Header/Header";
 import TaskTile from "../../components/TaskTile/TaskTile";

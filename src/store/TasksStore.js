@@ -7,8 +7,6 @@ export const useTasksStore = create(
     (set, get) => ({
       tasks: [],
 
-      // --- ACTIONS ---
-
       addTask: (title) => {
         const newTask = {
           id: Date.now(),

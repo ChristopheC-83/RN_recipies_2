@@ -10,9 +10,7 @@ import { s } from "./RecipeDetails.style";
 import { useEffect, useState } from "react";
 import { useRecipeDetailsStore } from "../../store/recipiesDetailsStore";
 import ScreenContainer from "../ScreenContainer/ScreenContainer";
-import { SafeAreaProvider, SafeAreaView } from "react-native-safe-area-context";
 import { useTasksStore } from "../../store/TasksStore";
-import Toast from "../../components/Toast/Toast";
 import { useToastStore } from "../../store/toastStore";
 
 export default function RecipeDetails({ navigation, route }) {
@@ -21,18 +19,11 @@ export default function RecipeDetails({ navigation, route }) {
   const showToast = useToastStore((state) => state.showToast);
   const { details, loading, error, getRecipeById } = useRecipeDetailsStore();
 
-
   const [currentRecipe, setCurrentRecipe] = useState(details[recipeId] || null);
-
-
 
   function handleAddIngredient(name) {
     addTask(name);
-    showToast({
-      text: `${name} ajouté à la liste`,
-      type: "success",
-    });
-
+    showToast(`${name} ajouté à la liste !`, "success");
   }
 
   useEffect(() => {
@@ -81,7 +72,6 @@ export default function RecipeDetails({ navigation, route }) {
           ))}
         </View>
       </ScrollView>
-      
     </ScreenContainer>
   );
 }

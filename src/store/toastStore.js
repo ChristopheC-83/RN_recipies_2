@@ -1,9 +1,22 @@
 import { create } from "zustand";
 
-export const useToastStore = create((set) => ({
-  toast: { visible: false, text: "", type: "success", duration: 1500 },
-  showToast: ({ text, type = "success", duration = 1500 }) =>
-    set({ toast: { visible: true, text, type, duration } }),
-  hideToast: () =>
-    set((state) => ({ toast: { ...state.toast, visible: false } })),
+export const useToastStore = create((set, get) => ({
+  toasts: [],
+
+  showToast: (text, type = "info", duration = 1500) => {
+  const id = Date.now();
+  set({
+    toasts: [...get().toasts, { id, text, type, duration }],
+  })
+
+
+    // Auto-hide
+    setTimeout(() => {
+      get().hideToast(id);
+    }, duration);
+  },
+
+  hideToast: (id) => {
+    set({ toasts: get().toasts.filter((t) => t.id !== id) });
+  },
 }));
