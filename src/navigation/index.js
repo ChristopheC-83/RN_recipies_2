@@ -6,21 +6,27 @@ import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import RecipiesList from "../screens/RecipiesList/RecipiesList";
 import TasksScreen from "../screens/TasksScreen/TasksScreen";
 import RecipieDetails from "../screens/RecipeDetails/RecipeDetails";
+import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 
 const Stack = createNativeStackNavigator();
+const Tabs = createBottomTabNavigator();
 
 export default function AppNavigation() {
   return (
     <NavigationContainer>
-      <Stack.Navigator
+      <Tabs.Navigator screenOptions={{headerShown:false}}>
+        <Tabs.Screen name="Recettes" component={RecipiesList} />
+        <Tabs.Screen name="Liste" component={TasksScreen} />
+      </Tabs.Navigator>
+      {/* <Stack.Navigator
         initialRouteName="Recipes List"
         //  on centre le titre
         screenOptions={{
           headerTitleAlign: "center",
         }}
-      >
+      > */}
         {/* initialRouteName permet de choisir l'ecran d'accueil sinon 1er stack pack.screen par defaut */}
-        <Stack.Screen name="Recipes List" component={RecipiesList} />
+        {/* <Stack.Screen name="Recipes List" component={RecipiesList} />
         <Stack.Screen name="Tasks List" component={TasksScreen} />
         <Stack.Screen
           name="Recipes Details"
@@ -40,7 +46,7 @@ export default function AppNavigation() {
             ),
           })}
         />
-      </Stack.Navigator>
+      </Stack.Navigator> */}
     </NavigationContainer>
   );
 }

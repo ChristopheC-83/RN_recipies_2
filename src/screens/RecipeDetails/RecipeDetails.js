@@ -10,6 +10,7 @@ import {
 import { s } from "./RecipeDetails.style";
 import { useEffect, useState } from "react";
 import { useRecipeDetailsStore } from "../../store/recipiesDetailsStore";
+import ScreenContainer from "../ScreenContainer/ScreenContainer";
 
 export default function RecipeDetails({ navigation, route }) {
   const { recipeId } = route.params;
@@ -38,6 +39,7 @@ export default function RecipeDetails({ navigation, route }) {
     return <Text style={s.info}>Aucune recette trouvée...</Text>;
 
   return (
+    <ScreenContainer>
     <ScrollView style={s.container}>
       {/* retour en arriere ou une autre page au besoin */}
       {/* <Pressable onPress={() => navigation.goBack()}>
@@ -56,6 +58,7 @@ export default function RecipeDetails({ navigation, route }) {
           </Text>
         ))}
       </View>
-    </ScrollView>
+      </ScrollView>
+      </ScreenContainer>
   );
 }
